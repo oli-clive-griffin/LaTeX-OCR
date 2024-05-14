@@ -98,7 +98,7 @@ def token2str(tokens, tokenizer) -> list:
     return [''.join(detok.split(' ')).replace('Ġ', ' ').replace('[EOS]', '').replace('[BOS]', '').replace('[PAD]', '').strip() for detok in dec]
 
 
-def pad(img: Image, divable: int = 32) -> Image:
+def pad(img: Image.Image, divable: int = 32) -> Image.Image:
     """Pad an Image to the next full divisible value of `divable`. Also normalizes the image and invert if needed.
 
     Args:
